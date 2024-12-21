@@ -27,7 +27,7 @@ public class UserEntity {
 
     @ManyToMany
     @JoinTable(
-            name = "users_permissions",
+            name = "user_permissions",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name ="permission_code")
     )

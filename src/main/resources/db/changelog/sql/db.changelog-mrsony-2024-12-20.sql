@@ -26,12 +26,12 @@ create table user_permissions
 );
 
 insert into permissions(code)
-values ("api_mobile"),
-values ("full_access");
+values ('api_mobile'),
+       ('full_access');
 
 insert into users(login, password)
 values ('admin', '$2a$10$iqHH0P4N0cp3kZYG9czQSuqDXTfvKBNW4aOMZIgXahmyjG7TvWrhi');
-insert into users_permissions(user_id, permission_code)
+insert into user_permissions(user_id, permission_code)
 select id, 'full_access'
 from users
 where login = 'admin';

@@ -33,10 +33,11 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth -> {
                             auth.requestMatchers(
                                             "/api/auth/**"
-                                    ).permitAll()
+                                    ).permitAll();
+                            auth.requestMatchers("/mobile-api/**")
+                                    .hasAnyAuthority("api_mobile", "full_access")
                                     .anyRequest()
                                     .authenticated();
-                            auth.requestMatchers("/mobile-api/**").hasAnyAuthority("api_mobile", "full_access");
                         }
                 )
                 .exceptionHandling(exception ->

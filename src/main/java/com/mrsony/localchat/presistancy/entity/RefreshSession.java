@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "refresh_session")
+@Table(name = "refresh_sessions")
 public class RefreshSession {
 
     @Id
