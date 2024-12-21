@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: 'LocalChat'
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/local_chat'
+    username: 'admin'
+    password: 'admin'
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+
+app:
+  jwt:
+    secret: 'secr3t'
+
+  auth:
+    mobile:
+      access: 5m
+      refresh: 5d
